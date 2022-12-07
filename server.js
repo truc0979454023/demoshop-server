@@ -45,9 +45,9 @@ mongoose.connect(
   }
 );
 
-app.use(express.static("client/build"));
+app.use(express.static(__dirname));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/", (req, res) => {
