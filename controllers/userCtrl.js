@@ -86,7 +86,6 @@ const userCtrl = {
         const accesstoken = createAccessToken({ id: user.id });
         res.json({ accesstoken });
       });
-      return res.json({ rf_token });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
