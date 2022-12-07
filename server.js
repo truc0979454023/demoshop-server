@@ -28,7 +28,9 @@ app.use("/api", require("./routes/productRouter"));
 app.use("/api", require("./routes/paymentRouter"));
 
 //connect to mondodb
-const URI = process.env.MONGODB_URL;
+const URI =
+  process.env.MONGODB_URL ||
+  "mongodb+srv://truc0979454023:vhmtdkbdhpdm0@cluster0.cxapg.mongodb.net/websale?retryWrites=true&w=majority";
 mongoose.connect(
   URI,
   {
